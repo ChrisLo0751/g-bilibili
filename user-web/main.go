@@ -2,8 +2,10 @@ package main
 
 import (
 	"fmt"
+	"g-shopping/user-web/config"
 	"g-shopping/user-web/initialize"
 	"go.uber.org/zap"
+	"log"
 )
 
 var (
@@ -11,8 +13,19 @@ var (
 )
 
 func main() {
+	cfg, err := config.LoadConfig("./user-web/config")
+	if err != nil {
+		log.Fatalf("Could not load config: %v", err)
+	}
+
 	initialize.InitialLogger()
-	r := initialize.Routers()
+
+	db, err := initialize.InitDB(cfg.Database)
+	if err != nil {
+		log.Fatalf("Could not load db: %v", err)
+	}
+
+	r := initialize.Routers(db)
 
 	zap.S().Infof("启动服务器， 端口：%d", port)
 
