@@ -2,7 +2,6 @@ package api
 
 import (
 	"g-shopping/user-web/dto"
-	"g-shopping/user-web/model"
 	"g-shopping/user-web/service"
 	"github.com/gin-gonic/gin"
 	"net/http"
@@ -46,7 +45,7 @@ func (h *UserHandler) CreateUser(c *gin.Context) {
 		return
 	}
 
-	user := &model.User{
+	user := &dto.CreateUserRequest{
 		Name: req.Name,
 	}
 	if err := h.userService.CreateUser(user); err != nil {

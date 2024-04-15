@@ -8,7 +8,7 @@ import (
 
 type UserService interface {
 	GetUser(id int) (*dto.UserResponse, error)
-	CreateUser(user *model.User) error
+	CreateUser(userRequest *dto.CreateUserRequest) error
 }
 
 type UserServiceImpl struct {
@@ -30,7 +30,8 @@ func (u UserServiceImpl) GetUser(id int) (*dto.UserResponse, error) {
 	}, nil
 }
 
-func (u UserServiceImpl) CreateUser(user *model.User) error {
-	//TODO implement me
-	panic("implement me")
+func (u UserServiceImpl) CreateUser(userRequest *dto.CreateUserRequest) error {
+	return u.UserData.CreateUser(&model.User{
+		Name: userRequest.Name,
+	})
 }
