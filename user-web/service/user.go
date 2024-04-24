@@ -38,6 +38,11 @@ func (u UserServiceImpl) CreateUser(userRequest *dto.CreateUserRequest) error {
 		return fmt.Errorf("the phone or password is required")
 	}
 
+	_, err := u.UserData.GetUserByPhone(userRequest.Phone)
+	if err == nil {
+		return fmt.Errorf("手机号 %s 已被注册", userRequest.Phone)
+	}
+
 	return u.UserData.CreateUser(&model.User{
 		Phone:    userRequest.Phone,
 		Password: userRequest.Password,
