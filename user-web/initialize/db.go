@@ -17,6 +17,7 @@ func InitDB(cfg config.DatabaseConfig) (*gorm.DB, error) {
 
 	// Optional: 自动迁移模式
 	db.AutoMigrate(&model.User{})
+	db.AutoMigrate(&model.UserInfo{})
 
 	return db, nil
 }

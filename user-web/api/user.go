@@ -4,6 +4,7 @@ import (
 	"g-shopping/user-web/dto"
 	"g-shopping/user-web/service"
 	"github.com/gin-gonic/gin"
+	"go.uber.org/zap"
 	"net/http"
 	"strconv"
 )
@@ -32,8 +33,8 @@ func (h *UserHandler) GetUser(c *gin.Context) {
 	}
 
 	response := dto.UserResponse{
-		ID:   user.ID,
-		Name: user.Name,
+		ID:    user.ID,
+		Phone: user.Phone,
 	}
 	c.JSON(http.StatusOK, response)
 }
@@ -41,21 +42,23 @@ func (h *UserHandler) GetUser(c *gin.Context) {
 func (h *UserHandler) CreateUser(c *gin.Context) {
 	var req dto.CreateUserRequest
 	if err := c.ShouldBindJSON(&req); err != nil {
+		zap.S().Error(err)
 		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid data"})
 		return
 	}
 
 	user := &dto.CreateUserRequest{
-		Name: req.Name,
+		Phone:    req.Phone,
+		Password: req.Password,
 	}
 	if err := h.userService.CreateUser(user); err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "could not create user"})
+		zap.S().Error(err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "could not create user, err: " + err.Error()})
 		return
 	}
 
-	response := dto.UserResponse{
-		ID:   user.ID,
-		Name: user.Name,
-	}
-	c.JSON(http.StatusCreated, response)
+	c.JSON(http.StatusCreated, &dto.BaseResponese{
+		Code: http.StatusCreated,
+		Msg:  "成功创建用户",
+	})
 }
