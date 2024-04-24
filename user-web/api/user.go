@@ -53,7 +53,7 @@ func (h *UserHandler) CreateUser(c *gin.Context) {
 	}
 	if err := h.userService.CreateUser(user); err != nil {
 		zap.S().Error(err)
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "could not create user, err: " + err.Error()})
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "创建用户失败: " + err.Error()})
 		return
 	}
 

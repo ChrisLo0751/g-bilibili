@@ -8,6 +8,7 @@ import (
 type UserData interface {
 	GetUser(id int) (*model.User, error)
 	CreateUser(user *model.User) error
+	GetUserByPhone(phone string) (*model.User, error)
 }
 type UserDataImpl struct {
 	DB *gorm.DB
@@ -29,4 +30,10 @@ func (d *UserDataImpl) GetUser(id int) (*model.User, error) {
 func (d *UserDataImpl) CreateUser(user *model.User) error {
 	result := d.DB.Create(user)
 	return result.Error
+}
+
+func (d *UserDataImpl) GetUserByPhone(phone string) (*model.User, error) {
+	user := &model.User{}
+	result := d.DB.Where("phone = ?", phone).First(user)
+	return user, result.Error
 }
