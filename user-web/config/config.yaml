@@ -4,3 +4,5 @@ database:
   user: root
   password: 123456
   dbname: test
+auth:
+  jwtSecret: C81hwhd2vATrr3ZVzmUUFBgPenw2ydHwQmpRl1+di30=

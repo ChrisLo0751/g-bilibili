@@ -25,7 +25,7 @@ func main() {
 		log.Fatalf("Could not load db: %v", err)
 	}
 
-	r := initialize.Routers(db)
+	r := initialize.Routers(db, cfg)
 
 	zap.S().Infof("启动服务器， 端口：%d", port)
 
