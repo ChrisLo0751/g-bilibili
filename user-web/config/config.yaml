@@ -6,3 +6,42 @@ database:
   dbname: test
 auth:
   jwtSecret: C81hwhd2vATrr3ZVzmUUFBgPenw2ydHwQmpRl1+di30=
+  rsaPublicKey: |
+    -----BEGIN PUBLIC KEY-----
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyayx76c/mSopXOqTx2x0
+    cp8LKt0bSKt8FemsFULgyG1giK7lC17az6pTsfPf3npWxf1Kefg6ywBhFtMQGPTW
+    2beIMjvTlWkDi4IPl6L8qMdKEq553luE5EMxiq4fI1u+CXjLa7wCP6Vdm/I6Jqag
+    SOoONGWqcgYyf4oioCPFv4aG/pBm3liN86TEXrx00b72X3LsN6tOy/XwFJIegix4
+    bc54xKtsoChEoZ6NpAyAEVzNe3jkaRrETxmyrgjRmWZAD2TjZDCVI9CArliAL9JZ
+    v27cGd1EhSpR2wXZYWB2SDtWAjyRzOClXGkZNwnUpieQ2ET74XRjA33zuRHqjwWM
+    cQIDAQAB
+    -----END PUBLIC KEY-----
+  rsaPrivateKey: |
+    -----BEGIN PRIVATE KEY-----
+    MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDJrLHvpz+ZKilc
+    6pPHbHRynwsq3RtIq3wV6awVQuDIbWCIruULXtrPqlOx89/eelbF/Up5+DrLAGEW
+    0xAY9NbZt4gyO9OVaQOLgg+Xovyox0oSrnneW4TkQzGKrh8jW74JeMtrvAI/pV2b
+    8jompqBI6g40ZapyBjJ/iiKgI8W/hob+kGbeWI3zpMRevHTRvvZfcuw3q07L9fAU
+    kh6CLHhtznjEq2ygKEShno2kDIARXM17eORpGsRPGbKuCNGZZkAPZONkMJUj0ICu
+    WIAv0lm/btwZ3USFKlHbBdlhYHZIO1YCPJHM4KVcaRk3CdSmJ5DYRPvhdGMDffO5
+    EeqPBYxxAgMBAAECggEAUZyyMRJUeU4HiRNglC4+fXgBE+qANQs4XsG+Iqh6wIEK
+    tKVaCRzsnWcHEZdoO+b0IJEcx3j9idLwd0UYWZETNO3BjtqJCAiEJ7uNRcbuSfrD
+    7gVvSd1tTNYoQT+vWCazI7AfWcyueEUaOZZvk96QNJGLCAcwT45UdypWUsnHJ3a3
+    5m8THif1DE13ojLnn0VBPNzc4pnyHeV8+wZo8lTE8/JEan9wZnsGAPiqpl6vTfIN
+    FdsYBp3S4aQOg6xXD/lXUFKfL99ZsTBpoICeazi9mQ7qut3bOke2rmzzTzGb+huJ
+    /+RBEeYW2Z2KJXe7sXKOGiHs20isqk7xMQ40DO/MAQKBgQDzrRSWWfAC+YuSCpaC
+    WacpTJ/GPEEAMvwPXoZj1Hitsgi9LfAe1G0J84WW5Gzl4+u2w4ynrCr+1HMxLmMh
+    cUTTOBwcwsApD8wyHi2k6xrStV0hqAW/ITwgquecT8P+bcplVIgwXarNMHHixHpN
+    3VBexEnTavWIsudeo+aq2joKMQKBgQDT39A46MReCAW3z1JNm8VI3l7zhdZGh4cb
+    p8Z7Fr78gXVIjzueW7eOdz6Gum/LocrUcZdfIi0F1slK9CNDVDD+AvanvLPyfLqF
+    8RGbEdX5VF74sn19OQs/SgyEyYQJFNDeMHyqWYJsBAnJbfUcOfBxHQaCgGJqlaq7
+    gCV0yQTWQQKBgGnbCJSAIYnJSl55BwU9WSbRyJ7fUgV6IJG0qID5risWqkE0kZlz
+    AqNODPyN4tjDeIR+0r2MR2lIdXoqAppmkFWJjHzaBYxQ9o3XGlEIaTCb5QdX7Jcp
+    Iuu2EsOOyz/eBgya+ka4ihh1MSQn4lGtENr6Pm//iQaHYYd1gCE8h/YhAoGAfPiG
+    2QpyyQPyW3juEtjOhSyk1P8cZH2MM8PCTtgbztSNWT8i60Ut/9pWByHwzyufd6+I
+    mZSO+eK22H8oTY5bV3hoBIhJm732RwrqV40tqOMbIZYmbrY27B3BRJGYT8L3cBcp
+    cVFanFvFagpxiTSjnhSAwnj3k+azzeTIMxpewAECgYB6/6B+FkrcrNW1bjxqPZrD
+    ybzqOs3T478qiA6nuR2d62+xkBZfydldY7f4OsuWSz/7m5p4mv7hEbivoO8/ACxW
+    VLU3oqUk12O7Y1xLUC7GGlf/IRGykDUq7LHKtu0TqCDdzlpqva5HZPDtJQcHpjLu
+    qhH+UrA4xWyeuHHVTpSx/Q==
+    -----END PRIVATE KEY-----
