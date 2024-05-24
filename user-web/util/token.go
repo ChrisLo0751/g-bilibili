@@ -36,5 +36,4 @@ func ParseToken(tokenString, jwtSecret string) (*Claims, error) {
 	}
 
 	return nil, jwt.NewValidationError("Invalid token", jwt.ValidationErrorMalformed)
-
 }

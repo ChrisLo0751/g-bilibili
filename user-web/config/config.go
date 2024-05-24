@@ -18,7 +18,9 @@ type DatabaseConfig struct {
 }
 
 type AuthConfig struct {
-	JWTSecret string
+	JWTSecret  string
+	PublicKey  string
+	PrivateKey string
 }
 
 func LoadConfig(path string) (config Config, err error) {

@@ -22,6 +22,8 @@ func TestToken(t *testing.T) {
 		return
 	}
 
+	util.Generate()
+
 	// 断言：确保解析出的用户名是正确的
 	assert.Equal(t, "test", claims.Username, "Token does not contain the expected username")
 }
